@@ -70,6 +70,7 @@ import org.slf4j.MDC;
 
 @Singleton
 @Slf4j
+//This is a test comment for github - JP
 public class RuneLite
 {
 	public static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".runelite");
