@@ -32,6 +32,7 @@ See if there is another way to check if NPC is dead other than GameTick
 Add config option for combat feed
 Look into the start up method, see if can use for resetting fields. Maybe just a reset method?
 Look into formatting the messages
+***BUG: Catches the damage being done to another npc that didn't come from local player
  */
 
 @PluginDescriptor(
