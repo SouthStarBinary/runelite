@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018, Lotto <https://github.com/devLotto>
+ * Copyright (c) 2018, Psikoi <https://github.com/psikoi>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,53 +22,30 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package net.runelite.client.plugins.cluescrolls.clues.emote;
 
-import net.runelite.api.Client;
-import net.runelite.api.Item;
+package net.runelite.client.plugins.loottracker;
 
-public class AnyRequirementCollection implements ItemRequirement
+import net.runelite.client.config.Config;
+import net.runelite.client.config.ConfigGroup;
+import net.runelite.client.config.ConfigItem;
+
+@ConfigGroup("loottracker")
+public interface LootTrackerConfig extends Config
 {
-	private String name;
-	private ItemRequirement[] requirements;
-
-	public AnyRequirementCollection(String name, ItemRequirement... requirements)
+	@ConfigItem(
+		keyName = "ignoredItems",
+		name = "Ignored items",
+		description = "Configures which items should be ignored when calculating loot prices."
+	)
+	default String getIgnoredItems()
 	{
-		this.name = name;
-		this.requirements = requirements;
+		return "";
 	}
 
-	@Override
-	public boolean fulfilledBy(int itemId)
-	{
-		for (ItemRequirement requirement : requirements)
-		{
-			if (requirement.fulfilledBy(itemId))
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	@Override
-	public boolean fulfilledBy(Item[] items)
-	{
-		for (ItemRequirement requirement : requirements)
-		{
-			if (requirement.fulfilledBy(items))
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	@Override
-	public String getCollectiveName(Client client)
-	{
-		return name;
-	}
+	@ConfigItem(
+		keyName = "ignoredItems",
+		name = "",
+		description = ""
+	)
+	void setIgnoredItems(String key);
 }
