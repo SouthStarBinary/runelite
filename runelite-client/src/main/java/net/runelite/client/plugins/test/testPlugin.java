@@ -74,6 +74,14 @@ public class testPlugin extends Plugin {
         //if you want both player and target hits:
         //if event.getActor() != client.getLocalPlayer() && !isNpc
 
+        /*
+        Base Case
+        if there is no previous target, return
+         */
+        if (targetNPC == null) {
+            return;
+        }
+
         //BASE CASE
         //if false then source is not an NPC return early
         if (!isNpc)
