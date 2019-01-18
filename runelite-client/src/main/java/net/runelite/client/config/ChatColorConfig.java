@@ -25,6 +25,7 @@
 package net.runelite.client.config;
 
 import java.awt.Color;
+import net.runelite.client.ui.JagexColors;
 
 @ConfigGroup("textrecolor")
 public interface ChatColorConfig extends Config
@@ -94,7 +95,7 @@ public interface ChatColorConfig extends Config
 	)
 	default Color opaqueClanChatInfo()
 	{
-		return Color.BLACK;
+		return JagexColors.CHAT_GAME_EXAMINE_TEXT_OPAQUE_BACKGROUND;
 	}
 
 	@ConfigItem(
@@ -334,7 +335,7 @@ public interface ChatColorConfig extends Config
 	)
 	default Color transparentClanChatInfo()
 	{
-		return Color.WHITE;
+		return JagexColors.CHAT_GAME_EXAMINE_TEXT_TRANSPARENT_BACKGROUND;
 	}
 
 	@ConfigItem(
@@ -508,4 +509,22 @@ public interface ChatColorConfig extends Config
 		description = "Color of Friend Usernames in Public Chat (transparent)"
 	)
 	Color transparentPublicFriendUsernames();
+
+	//Plugin specific chat colours
+
+	@ConfigItem(
+		position = 88,
+		keyName = "opaqueTimestamp",
+		name = "Timestamps (opaque)",
+		description = "Colour of Timestamps from the Timestamps plugin (opaque)"
+	)
+	Color opaqueTimestamp();
+
+	@ConfigItem(
+		position = 89,
+		keyName = "transparentTimestamp",
+		name = "Timestamps (transparent)",
+		description = "Colour of Timestamps from the Timestamps plugin (transparent)"
+	)
+	Color transparentTimestamp();
 }

@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.runecraft;
 
-import com.google.common.eventbus.Subscribe;
 import com.google.inject.Provides;
 import java.util.HashSet;
 import java.util.Set;
@@ -56,6 +55,7 @@ import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetInfo;
 import net.runelite.client.Notifier;
 import net.runelite.client.config.ConfigManager;
+import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
@@ -128,7 +128,7 @@ public class RunecraftPlugin extends Plugin
 	}
 
 	@Subscribe
-	public void updateConfig(ConfigChanged event)
+	public void onConfigChanged(ConfigChanged event)
 	{
 		abyssOverlay.updateConfig();
 	}
@@ -207,7 +207,7 @@ public class RunecraftPlugin extends Plugin
 	}
 
 	@Subscribe
-	public void onDecorativeObjectSpawn(DecorativeObjectSpawned event)
+	public void onDecorativeObjectSpawned(DecorativeObjectSpawned event)
 	{
 		DecorativeObject decorativeObject = event.getDecorativeObject();
 		if (AbyssRifts.getRift(decorativeObject.getId()) != null)
