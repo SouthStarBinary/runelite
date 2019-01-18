@@ -99,6 +99,17 @@ public interface SlayerConfig extends Config
 		return Color.RED;
 	}
 
+	@ConfigItem(
+		position = 7,
+		keyName = "weaknessPrompt",
+		name = "Show Monster Weakness",
+		description = "Show an overlay on a monster when it is weak enough to finish off (Only Lizards, Gargoyles & Rockslugs)"
+	)
+	default boolean weaknessPrompt()
+	{
+		return true;
+	}
+
 	// Stored data
 	@ConfigItem(
 		keyName = "taskName",
@@ -135,6 +146,41 @@ public interface SlayerConfig extends Config
 		description = ""
 	)
 	void amount(int amt);
+
+	@ConfigItem(
+		keyName = "initialAmount",
+		name = "",
+		description = "",
+		hidden = true
+	)
+	default int initialAmount()
+	{
+		return -1;
+	}
+	@ConfigItem(
+		keyName = "initialAmount",
+		name = "",
+		description = ""
+	)
+	void initialAmount(int initialAmount);
+
+	@ConfigItem(
+		keyName = "taskLocation",
+		name = "",
+		description = "",
+		hidden = true
+	)
+	default String taskLocation()
+	{
+		return "";
+	}
+
+	@ConfigItem(
+		keyName = "taskLocation",
+		name = "",
+		description = ""
+	)
+	void taskLocation(String key);
 
 	@ConfigItem(
 		keyName = "streak",
