@@ -16,7 +16,5 @@ public interface  testConfig extends Config  {
     )
     default boolean myCheckBox() {return true;}
 
-    @ConfigItem(keyName = "input", name = "Insert Input", description = "Input a option", position = 2)
-    default String myInput() {return "";}
 
 }

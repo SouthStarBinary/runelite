@@ -1,8 +1,8 @@
 package net.runelite.client.plugins.test;
 
-import com.google.common.eventbus.Subscribe;
+//import com.google.common.eventbus.Subscribe;
 import com.google.inject.Provides;
-
+import net.runelite.client.eventbus.Subscribe;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.time.Instant;
