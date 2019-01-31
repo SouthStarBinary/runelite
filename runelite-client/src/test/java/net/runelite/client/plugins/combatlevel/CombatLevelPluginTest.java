@@ -100,23 +100,23 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test attack/strength
+		// aftercombatstats attack/strength
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("melee"),
 			player.getCombatLevel() + 1, ATT_STR_MULT));
 
-		// test defence/hitpoints
+		// aftercombatstats defence/hitpoints
 		assertEquals(3, calcLevels(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, DEF_HP_MULT));
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(5, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 
-		// test ranged
+		// aftercombatstats ranged
 		assertEquals(2, calcLevelsRM(client.getRealSkillLevel(Skill.RANGED),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 
-		// test magic
+		// aftercombatstats magic
 		assertEquals(2, calcLevelsRM(client.getRealSkillLevel(Skill.MAGIC),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 	}
@@ -135,23 +135,23 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test attack/strength
+		// aftercombatstats attack/strength
 		assertEquals(1, calcLevels(baseValues.get("base") + baseValues.get("melee"),
 			player.getCombatLevel() + 1, ATT_STR_MULT));
 
-		// test defence/hitpoints
+		// aftercombatstats defence/hitpoints
 		assertEquals(1, calcLevels(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, DEF_HP_MULT));
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(2, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 
-		// test ranged
+		// aftercombatstats ranged
 		assertEquals(4, calcLevelsRM(client.getRealSkillLevel(Skill.RANGED),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 
-		// test magic
+		// aftercombatstats magic
 		assertEquals(4, calcLevelsRM(client.getRealSkillLevel(Skill.MAGIC),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 	}
@@ -171,23 +171,23 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test attack/strength
+		// aftercombatstats attack/strength
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("melee"),
 			player.getCombatLevel() + 1, ATT_STR_MULT));
 
-		// test defence/hitpoints
+		// aftercombatstats defence/hitpoints
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, DEF_HP_MULT));
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(4, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 
-		// test ranged
+		// aftercombatstats ranged
 		assertEquals(17, calcLevelsRM(client.getRealSkillLevel(Skill.RANGED),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 
-		// test magic
+		// aftercombatstats magic
 		assertEquals(19, calcLevelsRM(client.getRealSkillLevel(Skill.MAGIC),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 	}
@@ -207,23 +207,23 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test attack/strength
+		// aftercombatstats attack/strength
 		assertEquals(18, calcLevels(baseValues.get("base") + baseValues.get("melee"),
 			player.getCombatLevel() + 1, ATT_STR_MULT));
 
-		// test defence/hitpoints
+		// aftercombatstats defence/hitpoints
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, DEF_HP_MULT));
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(3, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 
-		// test ranged
+		// aftercombatstats ranged
 		assertEquals(14, calcLevelsRM(client.getRealSkillLevel(Skill.RANGED),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 
-		// test magic
+		// aftercombatstats magic
 		assertEquals(1, calcLevelsRM(client.getRealSkillLevel(Skill.MAGIC),
 			player.getCombatLevel() + 1, baseValues.get("base")));
 	}
@@ -244,15 +244,15 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test attack/strength
+		// aftercombatstats attack/strength
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("melee"),
 			player.getCombatLevel() + 1, ATT_STR_MULT));
 
-		// test defence/hitpoints
+		// aftercombatstats defence/hitpoints
 		assertEquals(2, calcLevels(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, DEF_HP_MULT));
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(4, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 	}
@@ -271,7 +271,7 @@ public class CombatLevelPluginTest
 
 		HashMap<String, Double> baseValues = getBaseValues();
 
-		// test prayer
+		// aftercombatstats prayer
 		assertEquals(1, calcLevelsPray(baseValues.get("base") + baseValues.get("max"),
 			player.getCombatLevel() + 1, client.getRealSkillLevel(Skill.PRAYER)));
 	}

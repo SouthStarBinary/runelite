@@ -194,7 +194,7 @@ public class CrypticClue extends ClueScroll implements TextClueScroll, NpcClueSc
 		new CrypticClue("Let's hope you don't meet a watery death when you encounter this fiend.", null, "Kill a waterfiend."),
 		new CrypticClue("Reflection is the weakness for these eyes of evil.", null, "Kill a basilisk."),
 		new CrypticClue("Search a bookcase in Lumbridge swamp.", BOOKCASE_9523, new WorldPoint(3146, 3177, 0), "Located in Father Urhney's house."),
-		new CrypticClue("Surround my bones in fire, ontop the wooden pyre. Finally lay me to rest, before my one last test.", null, "Kill a confused/lost barbarian to receive mangled bones. Construct and burn a pyre ship. Kill the ferocious barbarian spirit that spawns to receive a clue casket."),
+		new CrypticClue("Surround my bones in fire, ontop the wooden pyre. Finally lay me to rest, before my one last aftercombatstats.", null, "Kill a confused/lost barbarian to receive mangled bones. Construct and burn a pyre ship. Kill the ferocious barbarian spirit that spawns to receive a clue casket."),
 		new CrypticClue("Fiendish cooks probably won't dig the dirty dishes.", new WorldPoint(3043, 4974, 1), "Dig by the fire in the Rogues' Den."),
 		new CrypticClue("My life was spared but these voices remain, now guarding these iron gates is my bane.",  "Key Master", new WorldPoint(1310, 1251, 0), "Speak to the Key Master in Cerberus' Lair."),
 		new CrypticClue("Search the boxes in one of the tents in Al Kharid.", BOXES_361, new WorldPoint(3308, 3206, 0), "Search the boxes in the tent east of the Silk trader."),

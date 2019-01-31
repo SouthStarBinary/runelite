@@ -1,25 +1,18 @@
-package net.runelite.client.plugins.test;
+package net.runelite.client.plugins.aftercombatstats;
 
 //import com.google.common.eventbus.Subscribe;
 import com.google.inject.Provides;
 import net.runelite.client.eventbus.Subscribe;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
-import java.time.Instant;
+
 import java.util.Arrays;
 import java.util.List;
 import javax.inject.Inject;
 
 import net.runelite.api.*;
 
-import static net.runelite.api.AnimationID.*;
-
-import net.runelite.api.events.AnimationChanged;
-import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.events.HitsplatApplied;
 import net.runelite.api.events.InteractingChanged;
-import net.runelite.client.input.KeyListener;
 import net.runelite.client.Notifier;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
@@ -40,7 +33,7 @@ Look into formatting the messages
         description = "After a fight gives you your highest, lowest, average, and total hits",
         tags = {"health", "hitpoints", "notifications", "prayer"}
 )
-public class testPlugin extends Plugin {
+public class aftercombatstatsPlugin extends Plugin {
 
     @Inject
     private Notifier notifier;
@@ -49,12 +42,12 @@ public class testPlugin extends Plugin {
     private Client client;
 
     @Inject
-    private testConfig config;
+    private aftercombatstatsConfig config;
 
     @Provides
-    testConfig provideConfig(ConfigManager configManager)
+    aftercombatstatsConfig provideConfig(ConfigManager configManager)
     {
-        return configManager.getConfig(testConfig.class);
+        return configManager.getConfig(aftercombatstatsConfig.class);
     }
 
 

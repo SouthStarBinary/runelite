@@ -70,7 +70,7 @@ import org.slf4j.LoggerFactory;
 
 @Singleton
 @Slf4j
-//Work branch comment test
+//Work branch comment aftercombatstats
 public class RuneLite
 {
 	public static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".runelite");

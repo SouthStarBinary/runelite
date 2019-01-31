@@ -24,7 +24,7 @@
  */
 package net.runelite.client.config;
 
-@ConfigGroup("test")
+@ConfigGroup("aftercombatstats")
 public interface TestConfig
 {
 	@ConfigItem(

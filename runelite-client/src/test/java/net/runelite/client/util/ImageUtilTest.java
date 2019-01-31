@@ -158,7 +158,7 @@ public class ImageUtilTest
 	@Test
 	public void resizeImage()
 	{
-		// TODO: test image contents after changing size
+		// TODO: aftercombatstats image contents after changing size
 
 		final BufferedImage larger = ImageUtil.resizeImage(oneByOne(BLACK), 46, 46);
 		final BufferedImage smaller = ImageUtil.resizeImage(centeredPixel(WHITE), 1, 1);

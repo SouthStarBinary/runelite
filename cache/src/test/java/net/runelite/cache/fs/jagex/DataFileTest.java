@@ -45,7 +45,7 @@ public class DataFileTest
 		DataFile df = new DataFile(file);
 
 		Container container = new Container(CompressionType.NONE, 0);
-		container.compress("test".getBytes(), null);
+		container.compress("aftercombatstats".getBytes(), null);
 		byte[] compressedData = container.data;
 		DataFileWriteResult res = df.write(42, 3, compressedData);
 
@@ -54,7 +54,7 @@ public class DataFileTest
 
 		byte[] buf = res2.data;
 		String str = new String(buf);
-		Assert.assertEquals("test", str);
+		Assert.assertEquals("aftercombatstats", str);
 	}
 
 	@Test
@@ -88,7 +88,7 @@ public class DataFileTest
 		DataFile df = new DataFile(folder.newFile());
 
 		Container container = new Container(CompressionType.GZ, 0);
-		container.compress("test".getBytes(), null);
+		container.compress("aftercombatstats".getBytes(), null);
 		byte[] compressedData = container.data;
 		DataFileWriteResult res = df.write(41, 4, compressedData);
 
@@ -97,7 +97,7 @@ public class DataFileTest
 
 		byte[] buf = res2.data;
 		String str = new String(buf);
-		Assert.assertEquals("test", str);
+		Assert.assertEquals("aftercombatstats", str);
 	}
 
 	@Test
@@ -106,7 +106,7 @@ public class DataFileTest
 		DataFile df = new DataFile(folder.newFile());
 
 		Container container = new Container(CompressionType.BZ2, 5);
-		container.compress("test".getBytes(), null);
+		container.compress("aftercombatstats".getBytes(), null);
 		byte[] compressedData = container.data;
 		DataFileWriteResult res = df.write(41, 4, compressedData);
 
@@ -115,7 +115,7 @@ public class DataFileTest
 
 		byte[] buf = res2.data;
 		String str = new String(buf);
-		Assert.assertEquals("test", str);
+		Assert.assertEquals("aftercombatstats", str);
 	}
 
 	@Test

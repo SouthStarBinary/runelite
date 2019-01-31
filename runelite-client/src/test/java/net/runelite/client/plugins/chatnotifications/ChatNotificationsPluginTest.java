@@ -78,7 +78,7 @@ public class ChatNotificationsPluginTest
 	@Test
 	public void onSetMessage()
 	{
-		when(config.highlightWordsString()).thenReturn("Deathbeam, Deathbeam OSRS , test");
+		when(config.highlightWordsString()).thenReturn("Deathbeam, Deathbeam OSRS , aftercombatstats");
 
 		MessageNode messageNode = mock(MessageNode.class);
 		when(messageNode.getValue()).thenReturn("Deathbeam, Deathbeam OSRS");
@@ -96,7 +96,7 @@ public class ChatNotificationsPluginTest
 	@Test
 	public void highlightListTest()
 	{
-		when(config.highlightWordsString()).thenReturn("this,is, a                   , test, ");
+		when(config.highlightWordsString()).thenReturn("this,is, a                   , aftercombatstats, ");
 		final Splitter splitter = Splitter.on(",").trimResults().omitEmptyStrings();
 		final List<String> higlights = splitter.splitToList(config.highlightWordsString());
 		assertEquals(4, higlights.size());
@@ -105,6 +105,6 @@ public class ChatNotificationsPluginTest
 		assertEquals("this", iterator.next());
 		assertEquals("is", iterator.next());
 		assertEquals("a", iterator.next());
-		assertEquals("test", iterator.next());
+		assertEquals("aftercombatstats", iterator.next());
 	}
 }

@@ -188,7 +188,7 @@ public class WorldArea
 	 * with some actors. For actor collision checking, use the
 	 * {@link #canTravelInDirection(Client, int, int, Predicate)} method.
 	 *
-	 * @param client the client to test in
+	 * @param client the client to aftercombatstats in
 	 * @param dx the x-axis direction to travel (-1, 0, or 1)
 	 * @param dy the y-axis direction to travel (-1, 0, or 1)
 	 * @return true if the area can travel in the specified direction
@@ -210,7 +210,7 @@ public class WorldArea
 	 * with some actors. However, using the {@code extraCondition} param
 	 * it is possible to implement this check manually.
 	 *
-	 * @param client the client to test in
+	 * @param client the client to aftercombatstats in
 	 * @param dx the x-axis direction to travel (-1, 0, or 1)
 	 * @param dy the y-axis direction to travel (-1, 0, or 1)
 	 * @param extraCondition an additional condition to perform when checking valid tiles,

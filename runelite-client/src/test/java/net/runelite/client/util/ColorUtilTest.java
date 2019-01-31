@@ -56,7 +56,7 @@ public class ColorUtilTest
 	public void prependColorTag()
 	{
 		COLOR_HEXSTRING_MAP.forEach((color, hex) -> {
-			assertEquals("<col=" + hex + ">test", ColorUtil.prependColorTag("test", color));
+			assertEquals("<col=" + hex + ">aftercombatstats", ColorUtil.prependColorTag("aftercombatstats", color));
 			assertEquals("<col=" + hex + ">", ColorUtil.prependColorTag("", color));
 		});
 
@@ -67,7 +67,7 @@ public class ColorUtilTest
 	public void wrapWithColorTag()
 	{
 		COLOR_HEXSTRING_MAP.forEach((color, hex) -> {
-			assertEquals("<col=" + hex + ">test</col>", ColorUtil.wrapWithColorTag("test", color));
+			assertEquals("<col=" + hex + ">aftercombatstats</col>", ColorUtil.wrapWithColorTag("aftercombatstats", color));
 			assertEquals("<col=" + hex + "></col>", ColorUtil.wrapWithColorTag("", color));
 		});
 	}
